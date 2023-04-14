@@ -1,0 +1,153 @@
+/* Html Layout */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.4s all linear;
+    font-size: 25px;
+}
+
+/* Zone 1 Header */
+
+header{
+    font-size: 25px;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(255, 200, 0);
+    box-shadow: 10px 1rem 1rem rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
+
+header img{
+    width: 347.5px; height: 120px;
+}
+
+header .navbar a{
+    font-size: 25px;
+    font-weight: normal;
+    color: black;
+
+}
+
+header .navbar a:hover{
+    font-size: 25px;
+    font-weight: normal;
+    color: rgb(100, 100, 100);
+    margin-left: 0px;
+    margin-right: 0px;
+    translate: 1s;
+}
+
+#menu-bar{
+    font-size: 25px;
+    cursor: pointer;
+    color: rgb(9, 152, 152);
+    border: 1px solid rgb(9, 152, 152);
+    border-radius: 5px;
+    padding: 8px;
+    display: none;
+}
+
+/* Zone 2 Home */
+
+section{
+padding: 10px;
+}
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 500px;
+    align-items: center;
+    background: url(../images/background3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    flex: 1 1 30px;
+    margin-top: 60px;
+    padding: 50px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 75%);
+}
+
+.home .content h3{
+    font-size: 50px;
+    color: rgb(255,200,0);
+}
+
+.home .content p{
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.btn{
+
+    padding: 15px;
+    border: 3px solid rgb(255, 200, 0);
+    color: rgb(255, 200, 0);
+    font-size: 25px;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+/* Zone 3 Category */
+
+/* Zone 4 Menu */
+
+/* Zone 5 Gallery */
+
+/* Zone 6 Review */
+
+/* Zone 7 Order */
+
+/* Zone 8 Footer */
+
+/* RWD Moblie Version */
+
+/* Zone 1 Header */
+@media (max-width: 600px){
+    #menu-bar{
+        display: initial;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+    header .navbar{
+        position: absolute;
+        top: 80px; left: 0; right: 0;
+        background-color: rgb(255, 200, 0);
+        border-top: 3px solid gray;
+        /* 隱藏下拉選單 */
+        clip-path: polygon(0 0, 100% 0, 100%, 0, 0 0);
+    }
+
+    header .navbar.a{
+        /* 疊起來 */
+        display: block;
+        font-size: 25px;
+        font-weight: normal;
+        color: rgb(0, 0, 0);
+        margin: 10px; padding: 6px;
+        border-left: 3px solid gray;
+        background-color: white;
+
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 10px;
+    }
+}
